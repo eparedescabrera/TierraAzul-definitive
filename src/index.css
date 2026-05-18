@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #0b6b2a;
+  --color-leaf: #23873a;
+  --color-limeSoft: #b8cf29;
+  --color-ocean: #123d63;
+  --color-mist: #f3f6f1;
+  --color-graphite: #263328;
+  --font-sans: Inter, Montserrat, Arial, sans-serif;
+  --shadow-nav: 0 18px 45px rgba(12, 63, 35, 0.18);
+  --shadow-card: 0 18px 50px rgba(18, 61, 99, 0.12);
+  --background-image-leaf-gradient: linear-gradient(135deg, #0b6b2a 0%, #23873a 50%, #b8cf29 100%);
+}
+
+:root {
+  color: #263328;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: Inter, Montserrat, Arial, sans-serif;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container-site {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.nav-link {
+  @apply relative inline-flex items-center py-5 text-[13px] font-extrabold text-black transition-colors duration-300 hover:text-white;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-3 left-0 h-[2px] w-0 rounded-full bg-white transition-all duration-300;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  @apply w-full;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-leaf-gradient px-7 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border-2 border-white/80 px-7 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition duration-300 hover:bg-white hover:text-forest;
+}
+
+.section-pad {
+  @apply py-20 lg:py-28;
+}
+
+.page-hero {
+  @apply relative flex min-h-[50vh] items-center overflow-hidden bg-ocean pt-36 text-white;
+}
+
+.page-hero::before {
+  content: '';
+  @apply absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(184,207,41,0.38),transparent_32%),linear-gradient(120deg,rgba(11,107,42,0.92),rgba(18,61,99,0.9))];
+}
+
+.leaf-card {
+  @apply rounded-[2rem] border border-forest/10 bg-white p-8 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav;
+}
+
+.mobile-panel {
+  box-shadow: -30px 0 70px rgba(18, 61, 99, 0.25);
+}
+
+.swiper-pagination-bullet {
+  width: 34px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #b8cf29;
+}
+
+.swiper-pagination {
+  left: 50% !important;
+  transform: translateX(-50%);
+  bottom: 22px !important;
+  width: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: rgba(18, 61, 99, 0.78);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(3px);
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+  z-index: 20;
+  opacity: 1 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: inherit !important;
+}
+
+.swiper-button-prev::after {
+  content: '‹' !important;
+}
+
+.swiper-button-next::after {
+  content: '›' !important;
+}
+
+.swiper-button-prev {
+  left: 18px !important;
+}
+
+.swiper-button-next {
+  right: 18px !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.55 !important;
+}
+
+.brand-mistral {
+  font-family: Mistral, "Segoe Script", "Brush Script MT", cursive;
+  letter-spacing: 0.04em;
+}

@@ -46,12 +46,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center md:text-left">
-          <h3 className="text-lg font-bold">{t('footer.youtube')}</h3>
+          <h3 className="text-lg font-bold text-youtube">{t('footer.youtube')}</h3>
           <a
-            href={youtubeVideos.url}
+            href={youtubeVideos.channelUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white transition duration-300 hover:-translate-y-1 hover:border-limeSoft hover:bg-limeSoft hover:text-ocean"
+            className="mt-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-youtube/40 text-youtube transition duration-300 hover:-translate-y-1 hover:border-youtube hover:bg-youtube hover:text-white"
             aria-label="YouTube"
           >
             <FaYoutube size={23} />

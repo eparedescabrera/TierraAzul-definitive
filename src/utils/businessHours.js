@@ -1,7 +1,7 @@
 const TIMEZONE = 'America/Costa_Rica';
 const OPEN_HOUR = 8;
 const OPEN_MINUTE = 0;
-const CLOSE_HOUR = 18;
+const CLOSE_HOUR = 16;
 const CLOSE_MINUTE = 0;
 
 const localeMap = {

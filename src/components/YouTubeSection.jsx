@@ -11,6 +11,9 @@ export default function YouTubeSection() {
       <div className="container-site">
         <SectionHeader
           eyebrow={t('home.video.eyebrow')}
+          eyebrowClassName="text-youtube"
+          eyebrowHref={youtubeVideos.channelUrl}
+          EyebrowIcon={FaYoutube}
           title={t('home.video.title')}
           text={t('home.video.text')}
         />
@@ -33,12 +36,12 @@ export default function YouTubeSection() {
 
         <div className="mt-10 text-center" data-aos="fade-up">
           <a
-            href={youtubeVideos.url}
+            href={youtubeVideos.channelUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded-full border-2 border-forest px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-forest transition hover:bg-forest hover:text-white"
+            className="inline-flex items-center gap-3 rounded-full border-2 border-youtube px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-youtube transition hover:bg-youtube hover:text-white"
           >
-            <FaYoutube className="text-lg text-[#e1222f]" />
+            <FaYoutube className="text-lg" />
             {t('home.video.channel')}
           </a>
         </div>

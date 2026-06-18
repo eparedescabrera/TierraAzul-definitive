@@ -63,10 +63,10 @@ export default function Header() {
             </Link>
             <div className="mr-8 flex items-center gap-5">
               <a
-                href={youtubeVideos.url}
+                href={youtubeVideos.channelUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="text-[#e1222f] transition hover:-translate-y-0.5 hover:text-ocean"
+                className="text-youtube transition hover:-translate-y-0.5 hover:opacity-80"
                 aria-label="YouTube"
               >
                 <FaYoutube size={17} />
@@ -199,6 +199,16 @@ export default function Header() {
           )}
         </div>
         <div className="absolute bottom-0 left-0 w-full border-t border-forest/10 bg-ocean p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] text-white">
+          <a
+            href={youtubeVideos.channelUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-bold text-youtube transition hover:opacity-80"
+            aria-label="YouTube"
+          >
+            <FaYoutube size={20} />
+            YouTube
+          </a>
           <LanguageSelector compact />
           <p className="mt-4 text-sm text-white/80">{t('common.tagline')}</p>
         </div>

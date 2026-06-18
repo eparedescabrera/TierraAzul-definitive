@@ -32,7 +32,7 @@ export const footerLinks = [
 ];
 
 export const youtubeVideos = {
-  url: import.meta.env.VITE_YOUTUBE_URL || 'https://youtu.be/94Bw5Hm29xM?si=D6BRmqe4wyIT4H8r',
+  channelUrl: import.meta.env.VITE_YOUTUBE_CHANNEL_URL || 'https://youtube.com/@tierraazul-c6w?si=n-d8x95cZgC41DrE',
   videoId: import.meta.env.VITE_YOUTUBE_VIDEO_ID || '94Bw5Hm29xM',
 };
 

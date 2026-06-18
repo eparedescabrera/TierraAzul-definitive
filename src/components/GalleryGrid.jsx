@@ -29,7 +29,7 @@ export default function GalleryGrid({ limit }) {
               key={filter}
               type="button"
               onClick={() => setActiveFilter(filter)}
-              className={`rounded-full px-5 py-2 text-sm font-bold uppercase tracking-[0.12em] transition ${
+              className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] transition sm:px-5 sm:text-sm sm:tracking-[0.12em] ${
                 activeFilter === filter ? 'bg-forest text-white' : 'bg-mist text-forest hover:bg-limeSoft hover:text-ocean'
               }`}
             >
@@ -45,7 +45,7 @@ export default function GalleryGrid({ limit }) {
             key={`${item.image}-${index}`}
             type="button"
             onClick={() => setSelected(item)}
-            className="group relative h-72 overflow-hidden rounded-[2rem] text-left shadow-card"
+            className="group relative h-56 overflow-hidden rounded-[1.5rem] text-left shadow-card sm:h-64 sm:rounded-[2rem] md:h-72"
             data-aos="zoom-in"
           >
             <img

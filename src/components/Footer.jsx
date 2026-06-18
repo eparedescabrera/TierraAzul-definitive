@@ -10,18 +10,18 @@ export default function Footer() {
 
   return (
     <footer className="bg-ocean text-white">
-      <div className="container-site grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr_0.6fr]">
-        <div>
+      <div className="container-site grid gap-10 py-12 sm:py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr_0.6fr]">
+        <div className="text-center md:text-left">
           <div className="inline-flex rounded-2xl border border-white/20 bg-white/12 px-5 py-4 backdrop-blur-md">
             <img
               src="/logo-tierra-azul-transparent.png"
               alt={t('common.company')}
-              className="h-24 w-auto max-w-[220px] object-contain opacity-95 brightness-110 contrast-105 drop-shadow-[0_2px_16px_rgba(255,255,255,0.28)]"
+              className="mx-auto h-20 w-auto max-w-[200px] object-contain opacity-95 brightness-110 contrast-105 drop-shadow-[0_2px_16px_rgba(255,255,255,0.28)] sm:h-24 sm:max-w-[220px] md:mx-0"
             />
           </div>
-          <p className="mt-6 max-w-sm text-sm leading-7 text-white/85">{t('footer.description')}</p>
+          <p className="mx-auto mt-6 max-w-sm text-sm leading-7 text-white/85 md:mx-0">{t('footer.description')}</p>
         </div>
-        <div>
+        <div className="text-center md:text-left">
           <h3 className="text-lg font-bold">{t('footer.links')}</h3>
           <div className="mt-5 grid gap-3">
             {footerLinks.map((link) => (
@@ -31,21 +31,21 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div>
+        <div className="text-center md:text-left">
           <h3 className="text-lg font-bold">{t('footer.contact')}</h3>
           <div className="mt-5 grid gap-4 text-sm text-white/75">
-            <span className="flex items-center gap-3">
-              <FiMail className="text-limeSoft" /> {t('topbar.email')}
+            <span className="flex items-start justify-center gap-3 break-all md:justify-start">
+              <FiMail className="mt-0.5 shrink-0 text-limeSoft" /> {t('topbar.email')}
             </span>
-            <span className="flex items-center gap-3">
-              <FiPhone className="text-limeSoft" /> {t('topbar.phone')}
+            <span className="flex items-center justify-center gap-3 md:justify-start">
+              <FiPhone className="shrink-0 text-limeSoft" /> {t('topbar.phone')}
             </span>
-            <span className="flex items-center gap-3">
-              <FiMapPin className="text-limeSoft" /> {t('topbar.location')}
+            <span className="flex items-start justify-center gap-3 text-balance md:justify-start">
+              <FiMapPin className="mt-0.5 shrink-0 text-limeSoft" /> {t('topbar.location')}
             </span>
           </div>
         </div>
-        <div>
+        <div className="text-center md:text-left">
           <h3 className="text-lg font-bold">{t('footer.youtube')}</h3>
           <a
             href={youtubeVideos.url}

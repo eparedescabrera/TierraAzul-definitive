@@ -7,11 +7,11 @@ export default function ProductCard({ name, text, image, to = '/productos' }) {
 
   return (
     <article
-      className="group relative flex flex-col overflow-hidden rounded-[2rem] bg-white px-6 pb-8 pt-8 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav"
+      className="group relative flex flex-col overflow-hidden rounded-[1.5rem] bg-white px-4 pb-6 pt-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav sm:rounded-[2rem] sm:px-6 sm:pb-8 sm:pt-8"
       data-aos="fade-up"
     >
-      <Link to={to} className="group/link relative mx-auto flex w-full max-w-[300px] justify-center">
-        <div className="relative aspect-square w-full max-w-[280px]">
+      <Link to={to} className="group/link relative mx-auto flex w-full max-w-[280px] justify-center sm:max-w-[300px]">
+        <div className="relative aspect-square w-full max-w-[240px] sm:max-w-[280px]">
           <div
             className="absolute inset-0 rounded-full bg-gradient-to-br from-[#d4f7e6] via-[#c8f5dc] to-[#b8e8cc] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] ring-1 ring-forest/10 transition duration-300 group-hover:ring-forest/30"
             aria-hidden
@@ -31,7 +31,7 @@ export default function ProductCard({ name, text, image, to = '/productos' }) {
           </div>
 
           <div className="absolute inset-0 z-30 flex items-center justify-center rounded-full bg-forest/80 opacity-0 backdrop-blur-[2px] transition duration-300 group-hover/link:opacity-100 group-active/link:opacity-100 group-focus-visible/link:opacity-100">
-            <span className="px-4 text-center text-2xl font-extrabold uppercase tracking-[0.14em] text-white drop-shadow">
+            <span className="px-3 text-center text-xl font-extrabold uppercase tracking-[0.12em] text-white drop-shadow sm:px-4 sm:text-2xl sm:tracking-[0.14em]">
               {name}
             </span>
           </div>

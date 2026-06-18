@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -31,6 +32,16 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   font-family: Inter, Montserrat, Arial, sans-serif;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 a,
@@ -43,7 +54,7 @@ button {
 }
 
 .container-site {
-  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
 .nav-link {
@@ -61,7 +72,7 @@ button {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-leaf-gradient px-7 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav;
+  @apply inline-flex items-center justify-center rounded-full bg-leaf-gradient px-5 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav sm:px-7 sm:py-3 sm:text-sm;
 }
 
 .btn-outline {
@@ -69,11 +80,11 @@ button {
 }
 
 .section-pad {
-  @apply py-20 lg:py-28;
+  @apply py-12 md:py-16 lg:py-28;
 }
 
 .page-hero {
-  @apply relative flex min-h-[50vh] items-center overflow-hidden bg-ocean pt-36 text-white;
+  @apply relative flex min-h-[42vh] items-center overflow-hidden bg-ocean pt-24 text-white sm:min-h-[45vh] sm:pt-28 lg:min-h-[50vh] lg:pt-36;
 }
 
 .page-hero::before {
@@ -99,7 +110,7 @@ button {
 }
 
 .leaf-card {
-  @apply rounded-[2rem] border border-forest/10 bg-white p-8 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav;
+  @apply rounded-[1.5rem] border border-forest/10 bg-white p-5 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav sm:rounded-[2rem] sm:p-6 md:p-8;
 }
 
 .mobile-panel {
@@ -196,5 +207,30 @@ button {
 @media (prefers-reduced-motion: reduce) {
   .brand-title-motion {
     animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 42px;
+    height: 42px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 24px;
+  }
+
+  .swiper-button-prev {
+    left: 10px !important;
+  }
+
+  .swiper-button-next {
+    right: 10px !important;
+  }
+
+  .swiper-pagination {
+    bottom: 14px !important;
   }
 }

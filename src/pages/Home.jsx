@@ -17,7 +17,7 @@ export default function Home() {
       <section className="section-pad bg-white">
         <div className="container-site">
           <SectionHeader eyebrow={t('nav.products')} title={t('products.subtitle')} />
-          <div className="mt-14 grid max-w-4xl gap-10 sm:mx-auto sm:grid-cols-2 lg:max-w-none lg:gap-12">
+          <div className="mt-10 grid max-w-4xl gap-8 sm:mx-auto sm:mt-14 sm:grid-cols-2 sm:gap-10 lg:max-w-none lg:gap-12">
             <ProductCard
               name={t('products.melon.name')}
               image={productImages.melon}

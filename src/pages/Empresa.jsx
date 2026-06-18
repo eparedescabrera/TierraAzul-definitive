@@ -22,13 +22,15 @@ export default function Empresa() {
           <div className="grid gap-8">
             {blocks.map(({ icon: Icon, titleKey, textKey }, index) => (
               <article key={titleKey} className="leaf-card" data-aos="fade-up" data-aos-delay={index * 80}>
-                <div className="flex items-start gap-4">
-                  <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-leaf-gradient text-2xl text-white">
+                <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-leaf-gradient text-xl text-white sm:h-14 sm:w-14 sm:text-2xl">
                     <Icon />
                   </span>
-                  <div>
-                    <h2 className="text-2xl font-extrabold text-ocean">{t(titleKey)}</h2>
-                    <p className="mt-4 text-lg leading-9 text-graphite/75">{t(textKey)}</p>
+                  <div className="min-w-0">
+                    <h2 className="text-xl font-extrabold text-ocean sm:text-2xl">{t(titleKey)}</h2>
+                    <p className="mt-3 text-base leading-8 text-graphite/75 sm:mt-4 sm:text-lg sm:leading-9">
+                      {t(textKey)}
+                    </p>
                   </div>
                 </div>
               </article>
@@ -36,7 +38,7 @@ export default function Empresa() {
           </div>
 
           <div
-            className="relative max-h-[1000px] overflow-hidden rounded-[2rem] shadow-card lg:sticky lg:top-36"
+            className="relative min-h-[240px] overflow-hidden rounded-[1.5rem] shadow-card sm:min-h-[320px] sm:rounded-[2rem] lg:sticky lg:top-36 lg:min-h-[520px]"
             data-aos="fade-left"
           >
             <img

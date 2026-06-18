@@ -26,6 +26,13 @@ export default function Header() {
     setMobileDropdown(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   return (
     <header className="fixed left-0 top-0 z-50 w-full">
       <div className="hidden bg-[#2f2f2d] text-white lg:block">
@@ -72,12 +79,12 @@ export default function Header() {
         <div className="relative z-[55] bg-white/95 lg:pb-4">
           <div className="container-site">
             <nav
-              className={`mx-auto flex min-h-[58px] max-w-6xl items-center justify-between bg-[#32bd67] px-4 shadow-nav transition-all duration-500 lg:min-h-[64px] lg:-mt-5 lg:px-10 ${
+              className={`mx-auto flex min-h-[56px] max-w-6xl items-center justify-between gap-2 bg-[#32bd67] px-3 shadow-nav transition-all duration-500 sm:min-h-[58px] sm:px-4 lg:min-h-[64px] lg:-mt-5 lg:gap-4 lg:px-10 ${
                 isSticky ? 'lg:shadow-nav' : ''
               }`}
               aria-label="Main navigation"
             >
-            <Link to="/" className="flex items-center gap-3 lg:hidden" aria-label={t('common.company')}>
+            <Link to="/" className="flex min-w-0 max-w-[calc(100%-3.5rem)] items-center lg:hidden" aria-label={t('common.company')}>
               <BrandText compact />
             </Link>
 
@@ -118,7 +125,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-forest lg:hidden"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-forest sm:h-12 sm:w-12 lg:hidden"
               aria-label="Open menu"
             >
               <FiMenu size={24} />
@@ -150,7 +157,7 @@ export default function Header() {
             <FiX size={22} />
           </button>
         </div>
-        <div className="space-y-2 p-5">
+        <div className="space-y-2 overflow-y-auto p-5 pb-36">
           {navItems.map((item) =>
             item.children ? (
               <div key={item.labelKey}>
@@ -191,7 +198,7 @@ export default function Header() {
             ),
           )}
         </div>
-        <div className="absolute bottom-0 left-0 w-full border-t border-forest/10 bg-ocean p-5 text-white">
+        <div className="absolute bottom-0 left-0 w-full border-t border-forest/10 bg-ocean p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] text-white">
           <LanguageSelector compact />
           <p className="mt-4 text-sm text-white/80">{t('common.tagline')}</p>
         </div>

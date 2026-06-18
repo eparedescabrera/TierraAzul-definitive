@@ -13,7 +13,7 @@ export default function Contacto() {
     <>
       <PageHero title={t('contactPage.title')} backgroundImage={pageHeroImages.contacto} />
       <section className="section-pad bg-mist">
-        <div className="container-site grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="container-site grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
           <ContactForm />
           <div className="grid gap-6">
             <article className="leaf-card" data-aos="fade-up">
@@ -35,7 +35,7 @@ export default function Contacto() {
               <iframe
                 title={t('contactPage.mapTitle')}
                 src="https://www.google.com/maps?q=Pilas+de+Canjel,+Puntarenas,+Costa+Rica&output=embed"
-                className="h-80 w-full border-0"
+                className="h-64 w-full border-0 sm:h-80"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />

@@ -39,8 +39,8 @@ export default function ProductDetail() {
 
           <div className="grid gap-10 lg:grid-cols-[1.45fr_0.75fr]">
             <article data-aos="fade-up">
-              <h2 className="mb-5 text-3xl font-extrabold text-ocean">{content.title}</h2>
-              <div className="rounded-[1.8rem] border border-forest/15 bg-white p-6 shadow-card md:p-8">
+              <h2 className="mb-5 text-2xl font-extrabold text-ocean sm:text-3xl">{content.title}</h2>
+              <div className="rounded-[1.25rem] border border-forest/15 bg-white p-4 shadow-card sm:rounded-[1.8rem] sm:p-6 md:p-8">
                 <div className="grid gap-5 md:grid-cols-2">
                   {mainSpecs.map(([label, value]) => (
                     <article
@@ -98,7 +98,7 @@ export default function ProductDetail() {
               data-aos="fade-up"
             >
               <div className="border-b border-forest/15 px-7 py-6">
-                <h3 className="flex items-center gap-3 text-3xl font-extrabold text-ocean">
+                <h3 className="flex flex-col items-start gap-3 text-2xl font-extrabold text-ocean sm:flex-row sm:items-center sm:text-3xl">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-leaf-gradient text-white">
                     <FiHeart />
                   </span>

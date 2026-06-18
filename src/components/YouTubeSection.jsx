@@ -16,7 +16,7 @@ export default function YouTubeSection() {
         />
 
         <article
-          className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[2rem] border border-forest/10 bg-ocean shadow-card"
+          className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-[1.5rem] border border-forest/10 bg-ocean shadow-card sm:mt-12 sm:rounded-[2rem]"
           data-aos="fade-up"
         >
           <div className="relative aspect-video w-full">

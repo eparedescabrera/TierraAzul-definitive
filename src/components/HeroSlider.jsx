@@ -20,7 +20,7 @@ export default function HeroSlider() {
         className="h-[100dvh] min-h-[100dvh]"
       >
         {heroImages.map((image, index) => {
-          const altLabels = ['Instalaciones Tierra Azul', 'Plantacion Tierra Azul', 'Vivero Tierra Azul'];
+          const altLabels = ['Instalaciones Tierra Azul', 'Plantación Tierra Azul', 'Vivero Tierra Azul'];
           return (
             <SwiperSlide key={image}>
               <div className="relative h-[100dvh] min-h-[100dvh]">

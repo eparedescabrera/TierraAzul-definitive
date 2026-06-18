@@ -6,7 +6,7 @@ import { pageHeroImages } from '../data/siteData';
 import { productDetails } from '../data/productDetails';
 
 const quickTitle = {
-  es: 'Informacion rapida',
+  es: 'Información rápida',
   en: 'Quick information',
   de: 'Kurzinformation',
   nl: 'Snelle informatie',
@@ -71,7 +71,14 @@ export default function ProductDetail() {
 
             <aside className="grid content-start gap-6">
               <article className="leaf-card overflow-hidden p-0 text-center" data-aos="fade-left">
-                <img src={product.image} alt={content.name} className="h-56 w-full object-cover" loading="lazy" />
+                <div className="product-showcase__banner">
+                  <img
+                    src={product.image}
+                    alt={content.name}
+                    className="product-showcase__image product-showcase__image--banner"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="p-7">
                   <h3 className="text-2xl font-extrabold text-ocean">{content.name}</h3>
                   <p className="mt-4 leading-7 text-graphite/70">{content.summary}</p>

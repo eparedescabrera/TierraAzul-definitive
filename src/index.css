@@ -113,6 +113,66 @@ button {
   @apply rounded-[1.5rem] border border-forest/10 bg-white p-5 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav sm:rounded-[2rem] sm:p-6 md:p-8;
 }
 
+.product-showcase {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 240px;
+}
+
+@media (min-width: 640px) {
+  .product-showcase {
+    max-width: 280px;
+  }
+}
+
+.product-showcase__bg,
+.product-showcase__glow,
+.product-showcase__overlay {
+  border-radius: 50%;
+}
+
+.product-showcase__image-shell {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.product-showcase__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.08);
+  transition: transform 0.5s ease;
+}
+
+.product-showcase:hover .product-showcase__image,
+.product-showcase:focus-within .product-showcase__image {
+  transform: scale(1.14);
+}
+
+.product-showcase__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e8f9f0 0%, #d8f3e6 100%);
+  padding: 0;
+  min-height: 14rem;
+}
+
+.product-showcase__image--banner {
+  height: 14rem;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  transform: none;
+}
+
 .mobile-panel {
   box-shadow: -30px 0 70px rgba(18, 61, 99, 0.25);
 }

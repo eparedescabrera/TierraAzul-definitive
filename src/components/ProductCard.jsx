@@ -11,26 +11,21 @@ export default function ProductCard({ name, text, image, to = '/productos' }) {
       data-aos="fade-up"
     >
       <Link to={to} className="group/link relative mx-auto flex w-full max-w-[280px] justify-center sm:max-w-[300px]">
-        <div className="relative aspect-square w-full max-w-[240px] sm:max-w-[280px]">
+        <div className="product-showcase">
           <div
-            className="absolute inset-0 rounded-full bg-gradient-to-br from-[#d4f7e6] via-[#c8f5dc] to-[#b8e8cc] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] ring-1 ring-forest/10 transition duration-300 group-hover:ring-forest/30"
+            className="product-showcase__bg absolute inset-0 bg-gradient-to-br from-[#d4f7e6] via-[#c8f5dc] to-[#b8e8cc] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] ring-1 ring-forest/10 transition duration-300 group-hover:ring-forest/30"
             aria-hidden
           />
           <div
-            className="pointer-events-none absolute inset-[10%] rounded-full bg-limeSoft/15 blur-xl"
+            className="product-showcase__glow pointer-events-none absolute inset-[10%] bg-limeSoft/15 blur-xl"
             aria-hidden
           />
 
-          <div className="relative z-10 flex h-full w-full items-center justify-center p-[14%]">
-            <img
-              src={image}
-              alt={name}
-              loading="lazy"
-              className="max-h-full max-w-full object-contain object-center drop-shadow-[0_10px_20px_rgba(18,61,99,0.12)] transition duration-500 group-hover/link:scale-[1.05]"
-            />
+          <div className="product-showcase__image-shell">
+            <img src={image} alt={name} loading="lazy" className="product-showcase__image" />
           </div>
 
-          <div className="absolute inset-0 z-30 flex items-center justify-center rounded-full bg-forest/80 opacity-0 backdrop-blur-[2px] transition duration-300 group-hover/link:opacity-100 group-active/link:opacity-100 group-focus-visible/link:opacity-100">
+          <div className="product-showcase__overlay absolute inset-0 z-30 flex items-center justify-center bg-forest/80 opacity-0 backdrop-blur-[2px] transition duration-300 group-hover/link:opacity-100 group-active/link:opacity-100 group-focus-visible/link:opacity-100">
             <span className="px-3 text-center text-xl font-extrabold uppercase tracking-[0.12em] text-white drop-shadow sm:px-4 sm:text-2xl sm:tracking-[0.14em]">
               {name}
             </span>

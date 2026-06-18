@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 
-const endpoint = `https://formsubmit.co/ajax/${import.meta.env.VITE_FORMSUBMIT_EMAIL || 'info@tierraazul1981.com'}`;
+const endpoint = `https://formsubmit.co/ajax/${import.meta.env.VITE_FORMSUBMIT_EMAIL || 'waju@grupopenca.com'}`;
 
 export default function ContactForm() {
   const { t } = useTranslation();

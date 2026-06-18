@@ -3,29 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { FiChevronDown, FiMail, FiMapPin, FiMenu, FiPhone, FiX } from 'react-icons/fi';
 import { FaYoutube } from 'react-icons/fa';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { navItems } from '../data/siteData';
+import { navItems, youtubeVideos } from '../data/siteData';
 import LanguageSelector from './LanguageSelector';
-
-function BrandText({ compact = false }) {
-  return (
-    <div className="flex items-center gap-3 leading-none">
-      <img
-        src="/logo-tierra-azul-transparent.png"
-        alt="Tierra Azul 1981"
-        className={`${compact ? 'h-12 w-12' : 'h-16 w-16 xl:h-20 xl:w-20'} object-contain`}
-      />
-      <div
-        className={`brand-mistral whitespace-nowrap font-black uppercase ${
-          compact ? 'text-2xl' : 'text-4xl xl:text-5xl'
-        }`}
-      >
-        <span className="text-black">TIERRA </span>
-        <span className="text-[#1554d1]">AZUL</span>
-        <span className="text-black"> 1981 S.A</span>
-      </div>
-    </div>
-  );
-}
+import BrandText from './BrandText';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -51,7 +31,7 @@ export default function Header() {
       <div className="hidden bg-[#2f2f2d] text-white lg:block">
         <div className="container-site flex h-8 items-center justify-between text-[12px]">
           <span className="inline-flex items-center gap-2 text-white/90">
-            <FiMapPin className="text-[#2f52d4]" /> Pilas de Cangel, Puntarenas, Costa Rica.
+            <FiMapPin className="text-[#2f52d4]" /> {t('topbar.location')}
           </span>
           <div className="flex items-center gap-7 text-white/90">
             <span className="inline-flex items-center gap-2">
@@ -76,7 +56,7 @@ export default function Header() {
             </Link>
             <div className="mr-8 flex items-center gap-5">
               <a
-                href="https://www.youtube.com/"
+                href={youtubeVideos.url}
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#e1222f] transition hover:-translate-y-0.5 hover:text-ocean"

@@ -4,7 +4,8 @@ import GalleryGrid from '../components/GalleryGrid';
 import HeroSlider from '../components/HeroSlider';
 import ProductCard from '../components/ProductCard';
 import SectionHeader from '../components/SectionHeader';
-import { featureCards, productImages } from '../data/siteData';
+import YouTubeSection from '../components/YouTubeSection';
+import { productImages } from '../data/siteData';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -12,22 +13,6 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
-
-      <section className="section-pad bg-mist">
-        <div className="container-site">
-          <SectionHeader title={t('home.introTitle')} text={t('home.introText')} />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {featureCards.map(({ icon: Icon, title }) => (
-              <article key={title} className="leaf-card text-center" data-aos="fade-up">
-                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-leaf-gradient text-2xl text-white">
-                  <Icon />
-                </span>
-                <h3 className="mt-5 text-lg font-extrabold text-ocean">{t(title)}</h3>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section-pad bg-white">
         <div className="container-site">
@@ -46,6 +31,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <YouTubeSection />
 
       <section className="section-pad bg-mist">
         <div className="container-site">

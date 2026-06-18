@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FiArrowLeft, FiCheckCircle, FiHeart } from 'react-icons/fi';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import { pageHeroImages } from '../data/siteData';
 import { productDetails } from '../data/productDetails';
 
 const quickTitle = {
@@ -26,7 +27,7 @@ export default function ProductDetail() {
 
   return (
     <>
-      <PageHero title={content.name} subtitle={content.subtitle} />
+      <PageHero title={content.name} backgroundImage={pageHeroImages[slug]} />
       <section className="section-pad bg-white">
         <div className="container-site">
           <Link

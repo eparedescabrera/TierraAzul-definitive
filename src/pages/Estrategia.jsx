@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FiBarChart2, FiGlobe, FiRefreshCw } from 'react-icons/fi';
 import PageHero from '../components/PageHero';
+import { pageHeroImages } from '../data/siteData';
 
 export default function Estrategia() {
   const { t } = useTranslation();
@@ -8,7 +9,7 @@ export default function Estrategia() {
 
   return (
     <>
-      <PageHero title={t('pages.estrategia.title')} subtitle={t('pages.estrategia.subtitle')} />
+      <PageHero title={t('pages.estrategia.title')} backgroundImage={pageHeroImages.estrategia} />
       <section className="section-pad bg-mist">
         <div className="container-site">
           <p className="mx-auto max-w-4xl text-center text-lg leading-9 text-graphite/75" data-aos="fade-up">

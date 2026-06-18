@@ -19,12 +19,14 @@ export default function HeroSlider() {
         grabCursor
         className="h-screen"
       >
-        {heroImages.map((image, index) => (
+        {heroImages.map((image, index) => {
+          const altLabels = ['Instalaciones Tierra Azul', 'Plantacion Tierra Azul', 'Vivero Tierra Azul'];
+          return (
           <SwiperSlide key={image}>
             <div className="relative h-screen">
               <img
                 src={image}
-                alt={index === 0 ? 'Sandia Tierra Azul' : 'Melon Tierra Azul'}
+                alt={altLabels[index] || 'Tierra Azul 1981'}
                 className="absolute inset-0 h-full w-full object-cover"
                 loading={index === 0 ? 'eager' : 'lazy'}
               />
@@ -37,7 +39,8 @@ export default function HeroSlider() {
               </div>
             </div>
           </SwiperSlide>
-        ))}
+          );
+        })}
       </Swiper>
     </section>
   );

@@ -38,6 +38,10 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+.container-relative {
+  @apply relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
 .container-site {
   @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
 }
@@ -75,6 +79,23 @@ button {
 .page-hero::before {
   content: '';
   @apply absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(184,207,41,0.38),transparent_32%),linear-gradient(120deg,rgba(11,107,42,0.92),rgba(18,61,99,0.9))];
+}
+
+.page-hero--image {
+  @apply bg-cover bg-center bg-no-repeat;
+}
+
+.page-hero--image::before {
+  @apply bg-[linear-gradient(120deg,rgba(11,107,42,0.84),rgba(18,61,99,0.88))];
+}
+
+.title-accent,
+.page-hero-accent {
+  width: 5.5rem;
+  height: 5px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #b8cf29 0%, #32bd67 50%, #b8cf29 100%);
+  box-shadow: 0 2px 14px rgba(184, 207, 41, 0.55);
 }
 
 .leaf-card {
@@ -154,4 +175,26 @@ button {
 .brand-mistral {
   font-family: Mistral, "Segoe Script", "Brush Script MT", cursive;
   letter-spacing: 0.04em;
+}
+
+@keyframes brand-title-float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-4px) translateX(3px);
+  }
+}
+
+.brand-title-motion {
+  display: inline-block;
+  animation: brand-title-float 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-title-motion {
+    animation: none;
+  }
 }

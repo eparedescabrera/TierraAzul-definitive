@@ -1,11 +1,15 @@
-export default function PageHero({ title, subtitle }) {
+export default function PageHero({ title, backgroundImage }) {
   return (
-    <section className="page-hero">
+    <section
+      className={`page-hero${backgroundImage ? ' page-hero--image' : ''}`}
+      style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined}
+    >
       <div className="container-site relative z-10 py-16">
-        <div className="max-w-3xl" data-aos="fade-up">
-          <span className="text-sm font-bold uppercase tracking-[0.24em] text-limeSoft">Tierra Azul 1981</span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-6xl">{title}</h1>
-          <p className="mt-5 text-lg leading-8 text-white/80">{subtitle}</p>
+        <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
+          <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">{title}</h1>
+          <div className="mt-5 flex justify-center">
+            <span className="title-accent" aria-hidden="true" />
+          </div>
         </div>
       </div>
     </section>

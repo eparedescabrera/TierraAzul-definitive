@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { FiCheckCircle, FiClipboard, FiShield } from 'react-icons/fi';
 import PageHero from '../components/PageHero';
+import { pageHeroImages } from '../data/siteData';
 
 export default function Calidad() {
   const { t } = useTranslation();
 
   return (
     <>
-      <PageHero title={t('pages.calidad.title')} subtitle={t('pages.calidad.subtitle')} />
+      <PageHero title={t('pages.calidad.title')} backgroundImage={pageHeroImages.calidad} />
       <section className="section-pad bg-white">
         <div className="container-site grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="leaf-card" data-aos="fade-right">

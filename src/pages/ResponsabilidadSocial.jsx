@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { FiDroplet, FiHeart, FiUsers } from 'react-icons/fi';
 import PageHero from '../components/PageHero';
+import { pageHeroImages } from '../data/siteData';
+import WasteCollectionSection from '../components/WasteCollectionSection';
 
 export default function ResponsabilidadSocial() {
   const { t } = useTranslation();
 
   return (
     <>
-      <PageHero title={t('pages.social.title')} subtitle={t('pages.social.subtitle')} />
+      <PageHero title={t('pages.social.title')} backgroundImage={pageHeroImages.social} />
       <section className="section-pad bg-mist">
         <div className="container-site">
           <p className="mx-auto max-w-4xl text-center text-lg leading-9 text-graphite/75" data-aos="fade-up">
@@ -23,6 +25,7 @@ export default function ResponsabilidadSocial() {
           </div>
         </div>
       </section>
+      <WasteCollectionSection />
     </>
   );
 }

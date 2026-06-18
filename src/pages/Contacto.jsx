@@ -1,14 +1,17 @@
 import { useTranslation } from 'react-i18next';
-import { FiClock, FiMail, FiPhone } from 'react-icons/fi';
+import { FiMail, FiPhone } from 'react-icons/fi';
+import BusinessHours from '../components/BusinessHours';
 import ContactForm from '../components/ContactForm';
+import DepartmentContacts from '../components/DepartmentContacts';
 import PageHero from '../components/PageHero';
+import { pageHeroImages } from '../data/siteData';
 
 export default function Contacto() {
   const { t } = useTranslation();
 
   return (
     <>
-      <PageHero title={t('contactPage.title')} subtitle={t('contactPage.subtitle')} />
+      <PageHero title={t('contactPage.title')} backgroundImage={pageHeroImages.contacto} />
       <section className="section-pad bg-mist">
         <div className="container-site grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <ContactForm />
@@ -16,9 +19,7 @@ export default function Contacto() {
             <article className="leaf-card" data-aos="fade-up">
               <h2 className="text-2xl font-extrabold text-ocean">{t('contactPage.hoursTitle')}</h2>
               <div className="mt-6 grid gap-4 text-graphite/75">
-                <span className="flex items-center gap-3">
-                  <FiClock className="text-forest" /> {t('topbar.schedule')}
-                </span>
+                <BusinessHours />
                 <span className="flex items-center gap-3">
                   <FiMail className="text-forest" /> {t('topbar.email')}
                 </span>
@@ -33,7 +34,7 @@ export default function Contacto() {
               </div>
               <iframe
                 title={t('contactPage.mapTitle')}
-                src="https://www.google.com/maps?q=Spain&output=embed"
+                src="https://www.google.com/maps?q=Pilas+de+Canjel,+Puntarenas,+Costa+Rica&output=embed"
                 className="h-80 w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -42,6 +43,7 @@ export default function Contacto() {
           </div>
         </div>
       </section>
+      <DepartmentContacts />
     </>
   );
 }

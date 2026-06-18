@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import FloatingWhatsApp from './FloatingWhatsApp';
+import ScrollTopButton from './ScrollTopButton';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -11,7 +11,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <ScrollTopButton />
     </>
   );
 }

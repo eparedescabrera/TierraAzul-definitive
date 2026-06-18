@@ -10,12 +10,10 @@ export default function ProductCard({ name, text, image, to = '/productos' }) {
       className="group relative flex flex-col overflow-hidden rounded-[2rem] bg-white px-6 pb-8 pt-8 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-nav"
       data-aos="fade-up"
     >
-      <p className="text-center text-sm font-medium uppercase tracking-[0.2em] text-graphite/45">{name}</p>
-
-      <div className="relative mx-auto mt-8 flex w-full max-w-[300px] justify-center">
+      <Link to={to} className="group/link relative mx-auto flex w-full max-w-[300px] justify-center">
         <div className="relative aspect-square w-full max-w-[280px]">
           <div
-            className="absolute inset-0 rounded-full bg-gradient-to-br from-[#d4f7e6] via-[#c8f5dc] to-[#b8e8cc] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] ring-1 ring-forest/10"
+            className="absolute inset-0 rounded-full bg-gradient-to-br from-[#d4f7e6] via-[#c8f5dc] to-[#b8e8cc] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] ring-1 ring-forest/10 transition duration-300 group-hover:ring-forest/30"
             aria-hidden
           />
           <div
@@ -28,8 +26,14 @@ export default function ProductCard({ name, text, image, to = '/productos' }) {
               src={image}
               alt={name}
               loading="lazy"
-              className="max-h-full max-w-full object-contain object-center drop-shadow-[0_10px_20px_rgba(18,61,99,0.12)] transition duration-500 group-hover:scale-[1.03]"
+              className="max-h-full max-w-full object-contain object-center drop-shadow-[0_10px_20px_rgba(18,61,99,0.12)] transition duration-500 group-hover/link:scale-[1.05]"
             />
+          </div>
+
+          <div className="absolute inset-0 z-30 flex items-center justify-center rounded-full bg-forest/80 opacity-0 backdrop-blur-[2px] transition duration-300 group-hover/link:opacity-100 group-active/link:opacity-100 group-focus-visible/link:opacity-100">
+            <span className="px-4 text-center text-2xl font-extrabold uppercase tracking-[0.14em] text-white drop-shadow">
+              {name}
+            </span>
           </div>
 
           <div
@@ -46,11 +50,9 @@ export default function ProductCard({ name, text, image, to = '/productos' }) {
             />
           </div>
         </div>
-      </div>
+      </Link>
 
-      <h3 className="mt-6 text-center text-2xl font-extrabold tracking-tight text-black">{name}</h3>
-
-      {text ? <p className="mx-auto mt-3 max-w-sm text-center text-sm leading-relaxed text-graphite/60">{text}</p> : null}
+      {text ? <p className="mx-auto mt-6 max-w-sm text-center text-sm leading-relaxed text-graphite/60">{text}</p> : null}
 
       <Link
         to={to}

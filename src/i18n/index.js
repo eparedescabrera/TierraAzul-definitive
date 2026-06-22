@@ -177,31 +177,32 @@ const resources = {
         departmentsSubtitle: 'Comuníquese directamente con el área que necesite.',
         personLabel: 'Responsable',
         emailLabel: 'Correo electrónico',
+        viewContact: 'Pase el mouse para ver el contacto',
         departments: {
           humanResources: {
             name: 'Recursos humanos',
-            person: 'María Fernández',
-            email: 'rrhh@tierraazul1981.com',
+            person: 'Marta Rosales Reyes',
+            email: 'recursoshumano@grupopenca.com',
           },
           logistics: {
             name: 'Logística',
-            person: 'Carlos Méndez',
-            email: 'logistica@tierraazul1981.com',
+            person: 'Jeanina Rosales Perez',
+            email: 'logistica@grupopenca.com',
           },
           environmental: {
             name: 'Gestión ambiental',
-            person: 'Ana Solís',
-            email: 'ambiental@tierraazul1981.com',
+            person: '',
+            email: 'gestion@grupopenca.com',
           },
           generalManagement: {
             name: 'Gerencia general',
-            person: 'Roberto Paredes',
+            person: 'Wagner Aju Venegas',
             email: 'waju@grupopenca.com',
           },
           adminAccounting: {
             name: 'Administración - Contabilidad',
-            person: 'Laura Jiménez',
-            email: 'administracion@tierraazul1981.com',
+            person: '',
+            email: 'facturacion@grupopenca.com',
           },
         },
       },
@@ -389,6 +390,7 @@ const resources = {
         departmentsSubtitle: 'Reach the area you need directly.',
         personLabel: 'Contact person',
         emailLabel: 'Email',
+        viewContact: 'Hover to view contact details',
         departments: {
           humanResources: {
             name: 'Human Resources',
@@ -601,6 +603,7 @@ const resources = {
         departmentsSubtitle: 'Wenden Sie sich direkt an die benotigte Abteilung.',
         personLabel: 'Ansprechpartner',
         emailLabel: 'E-Mail',
+        viewContact: 'Mit der Maus darüberfahren, um Kontaktdaten zu sehen',
         departments: {
           humanResources: {
             name: 'Personalwesen',
@@ -813,6 +816,7 @@ const resources = {
         departmentsSubtitle: 'Neem rechtstreeks contact op met de gewenste afdeling.',
         personLabel: 'Contactpersoon',
         emailLabel: 'E-mail',
+        viewContact: 'Beweeg de muis om contactgegevens te zien',
         departments: {
           humanResources: {
             name: 'Human Resources',

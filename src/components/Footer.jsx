@@ -12,11 +12,13 @@ export default function Footer() {
     <footer className="bg-ocean text-white">
       <div className="container-site grid gap-10 py-12 sm:py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr_0.6fr]">
         <div className="text-center md:text-left">
-          <div className="inline-flex rounded-2xl border border-white/20 bg-white/12 px-5 py-4 backdrop-blur-md">
+          <div className="inline-flex rounded-2xl border border-white/40 bg-white px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
             <img
               src="/logo-tierra-azul-transparent.png"
               alt={t('common.company')}
-              className="mx-auto h-20 w-auto max-w-[200px] object-contain opacity-95 brightness-110 contrast-105 drop-shadow-[0_2px_16px_rgba(255,255,255,0.28)] sm:h-24 sm:max-w-[220px] md:mx-0"
+              className="mx-auto h-20 w-auto max-w-[200px] object-contain sm:h-24 sm:max-w-[220px] md:mx-0"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <p className="mx-auto mt-6 max-w-sm text-sm leading-7 text-white/85 md:mx-0">{t('footer.description')}</p>

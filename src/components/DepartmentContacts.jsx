@@ -32,7 +32,7 @@ export default function DepartmentContacts() {
                 className="dept-card group"
                 data-aos="fade-up"
                 data-aos-delay={index * 80}
-                tabIndex={0}
+                tabIndex={-1}
               >
                 <div className="dept-card__inner">
                   <div className="dept-card__face dept-card__front">
@@ -50,7 +50,7 @@ export default function DepartmentContacts() {
                   </div>
 
                   <div className="dept-card__face dept-card__back">
-                    <h3 className="text-base font-extrabold uppercase tracking-[0.08em] text-ocean">
+                    <h3 className="text-lg font-extrabold uppercase tracking-[0.08em] text-ocean sm:text-xl">
                       {dept.name}
                     </h3>
                     <div className="mt-5 grid flex-1 gap-4 text-sm text-graphite/80">
